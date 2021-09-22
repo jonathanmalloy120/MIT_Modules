@@ -1,0 +1,45 @@
+<div id="container">
+  <!-- populated by JS-->
+</div>
+<script src="./boston.js"></script>
+<script>
+
+
+  function renderPosts(boston, container) {
+    const len = boston.data.length; // boston is an array
+    var people = boston.data;
+    var html = '';
+    //get top 5 earners
+    //calculate salary+overtime
+    for (let i = 0; i < len; i++) {
+      people[i].push(parseFloat(people[i][11]) + parseFloat(people[i][14])); //add salary + overtime at person[20]
+    }
+    //sort array based on value
+    people = people.sort(function(a,b) {
+      return a[20] - b[20];
+    });
+    //get bottom 5 elements in that array, write tags to HTML
+    topFive = people.slice(-5);
+    html += '<h1 class = "post"> <h2> TOP 5 EARNERS ARE: </h1>';
+    for (let i = 0; i < 5; i++) {
+        html += '<li class="post">' +
+        '<h2>' + topFive[i][8] + '</h2>' +
+        '<h3>' + topFive[i][20] + '</h3>'
+    }
+    //get number of people making m,ore that 100K
+    //write function to filter array
+    function moreThan100k(value) {
+      return parseFloat(value[20]) >=100000;
+    }
+    //apply function to filter array down
+    earners100K = people.filter(moreThan100k);
+    //get length of result array
+    //console.log(earners100K.length);
+
+    html += '<h1 class = "post"> <h2> There are ' + earners100K.length + ' people who make more than 100K  </h1>'
+
+
+    container.innerHTML = '<ul id = "boston">' + html + '</ul>';
+  }
+  renderPosts(boston, document.getElementById('container'));
+</script>

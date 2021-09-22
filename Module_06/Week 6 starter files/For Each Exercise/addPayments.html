@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<script src="payments_2005_to_2010.js"></script>
+<script>
+
+function add(item){
+	// -----------------------------
+	//    YOUR CODE: write callback 
+	// -----------------------------
+	payments += parseFloat(item[9]);
+}
+let payments = 0;
+chicago.data.forEach(add);
+console.log(payments.toFixed(2));
+
+</script>
+</html>

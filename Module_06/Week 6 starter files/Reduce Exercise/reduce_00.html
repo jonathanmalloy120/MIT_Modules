@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+const numbers = [1, 1, 2, 0, 3, 5, 8];
+
+// add array items using reduce
+const total = numbers.reduce(function(previous, current) {
+	if (current !== 0) {
+        return previous * current;
+    } else {
+        return previous;
+    }
+}, 1);
+
+// write to console
+console.log('total: ' + total);
+
+</script>
+</html>

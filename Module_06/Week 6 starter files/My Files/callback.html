@@ -1,0 +1,38 @@
+<html>
+<script>
+
+const list = [3,5,2,6,8,4,2,5,2,1,5,9,4];
+
+function callback(list) {
+    const newList = [];
+    for(let i=0; i < list.length;i++) {
+        if (newList.length ==0) {
+            newList.push(list[i]);
+        } else{
+            for(let j = 0; j < newList.length; j++) {
+                if (list[i] < newList[j]) {
+                    newList.splice(j,0,list[i]);
+                    break;
+                } else if (j == newList.length -1){
+                    newList.push(list[i]);
+                    break;
+                }
+            }
+        }
+    }
+    return newList;
+}
+
+function filter(list,callback) {
+    return callback(list);
+}
+
+const filtered = filter(list,callback)
+console.log(list);
+console.log(filtered)
+
+</script>
+</html>
+<!-- 
+2,3,5
+4 -->
