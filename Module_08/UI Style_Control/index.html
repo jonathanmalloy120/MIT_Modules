@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>style changer</title>
+    <script src="./style_change.js"></script>
+    <style>
+        .on {
+            background: orange;
+        }
+        .off {
+            background : green
+        }
+        div {
+            padding: 50px;
+            text-align: center;
+            border-style: solid;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="styleToggle()">TOGGLE</button>
+    <button onclick="styleOff()">OFF</button>
+    <button onclick="styleOn()">ON</button>
+    <div id = target class = off>CHECK ME OUT</div>
+
+    
+</body>
+</html>
