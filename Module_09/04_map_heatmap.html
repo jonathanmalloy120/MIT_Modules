@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Heat Map</title>
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js"></script>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet"
+    />
+    <script src="crime_2012_december.json" ></script>    
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoiam9uYXRoYW5tYWxsb3kxMjAiLCJhIjoiY2t1eTh4czY4NzBqODMxbzNhcGp6d3Z6MiJ9.HwXNB6LtjYW5blpxI0f3lw';
+
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [-87.6225,41.873941],
+    zoom: 12
+});
+
+map.on('load', function(){
+
+    const crimes = [];
+    chicago.data.forEach((crime,i) =>{
+        //here we are creating GeoJson data, which is a standard format of Json for working with geographic data
+        //the names of the properties, features, and syntax (eg double quotes around everything) are complient with the GeoJson standard
+        //which can be found at geojson.org
+        crimes.push({
+            "type": "Feature",
+            "properties": {
+                "dbh": (60*Math.random())
+            },
+            "geometry":{
+                "type": "Point",
+                "coordinates":[crime[28],crime[26]] //comes from data from chicago.data
+            }
+        })
+    });
+    //once we have pushed all of our crimes into the crimes array, we make a geoJson object that we can use later
+    const geojson = {
+        "type": "FeatureCollection", "features":crimes
+    }
+    //add data to the map
+    map.addSource('crime', {
+        'type': 'geojson', //tells what type of data to expect
+        'data': geojson //our actual object with our crimes array inside as a feature
+    })
+    
+});
+
+</script>
+</body>
+</html>
