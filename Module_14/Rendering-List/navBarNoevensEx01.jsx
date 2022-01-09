@@ -2,8 +2,8 @@
 // then make a Button for each instead of an <li>
 function NavBar({ menuitems }) {
   const { Button } = ReactBootstrap;
-  const updatedList = menuitems.map((listItems, index) => {
-    return <li key={index.toString()}>{listItems}</li>;
+  const updatedList = menuitems.filter(item=> item%2 ==1).map((listItems, index) => { // do it up here, added filter
+    return <Button key={index.toString()}>{listItems}</Button>;
   });
   // note that React needs to have a single Parent
   return <ul style={{ listStyleType: "none" }}>{updatedList}</ul>;
