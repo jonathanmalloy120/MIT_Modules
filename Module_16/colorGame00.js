@@ -1,3 +1,4 @@
+//my file, all self contained (I think?)
 function checkWinner (state) {
   console.log('winner has run')
   const win = [
