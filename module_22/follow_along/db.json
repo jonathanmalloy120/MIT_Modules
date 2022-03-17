@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "name": "Catherine Hessel",
+      "dob": "1960-5-25",
+      "email": "Catherine72@yahoo.com",
+      "username": "Catherine88",
+      "password": "URcViNZKP3yyd2h",
+      "phone": "(326) 209-5724 x958",
+      "streetaddress": "659 Violet Corners",
+      "citystatezip": "East Arvilla, RI 08659-9697",
+      "latitude": "36.4377",
+      "longitude": "111.6976",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/rdsaunders/128.jpg"
+    },
+    {
+      "name": "Dejon Ledner DVM",
+      "dob": "1976-12-1",
+      "email": "Dejon_Ledner@yahoo.com",
+      "username": "Dejon_Ledner42",
+      "password": "Dp3nrpKEHTOT_iP",
+      "phone": "1-322-664-3245 x3691",
+      "streetaddress": "77262 Barton Views",
+      "citystatezip": "Sonyatown, AR 25238-9242",
+      "latitude": "-43.8692",
+      "longitude": "54.5965",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/n1ght_coder/128.jpg"
+    },
+    {
+      "name": "Jaleel Hammes",
+      "dob": "1946-3-30",
+      "email": "Jaleel24@gmail.com",
+      "username": "Jaleel65",
+      "password": "jXwhm7zL360ZDH_",
+      "phone": "293.287.9921",
+      "streetaddress": "36563 Deckow Groves",
+      "citystatezip": "East Marcelstad, OR 05993",
+      "latitude": "-38.9857",
+      "longitude": "-96.5503",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/depaulawagner/128.jpg"
+    },
+    {
+      "name": "Hoyt McLaughlin",
+      "dob": "1953-11-28",
+      "email": "Hoyt_McLaughlin@hotmail.com",
+      "username": "Hoyt.McLaughlin",
+      "password": "jyiNcR1z2qDVDCT",
+      "phone": "1-949-937-2966",
+      "streetaddress": "333 Cummerata Street",
+      "citystatezip": "Port Andreane, NC 70374-5245",
+      "latitude": "19.5134",
+      "longitude": "-156.6317",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/caseycavanagh/128.jpg"
+    }
+  ]
+}
