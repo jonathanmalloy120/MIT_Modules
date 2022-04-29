@@ -1,0 +1,5 @@
+user: JonMalloy
+pass: awesome
+
+Stripe Public Key: pk_test_51Ktv6BHXDdIbVMUsnJgKsaDb9wm0Rb5bvjYt4cXMtfQHj7tMTuCgsQQizHDAnMXBr1GeLR8nAvf4qHrFKzDJwfgo00Ina7GikD
+Stripe Private Key: sk_test_51Ktv6BHXDdIbVMUsA8rUOLcDIdrvl3ebqxjgOwqYDnwcoWzRJRUg62Ud9AxtATx2ONDDNF0R5ZlvzdDsjeCjyMcf00mWFxbeox
