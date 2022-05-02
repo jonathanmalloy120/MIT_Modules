@@ -1,0 +1,11 @@
+To activate virtual machine:
+
+ ssh -i Digital_Ocean_SSH_Key.txt root@165.227.219.193
+ 
+ numbers at the end are IP addess of machine we created on digital ocean
+ 
+ sudo ufw allow 3001
+ unblocks a port, all of which are blocked by default
+ 
+ nano {filename}
+ opens basic command line text editor on virtual machine 
